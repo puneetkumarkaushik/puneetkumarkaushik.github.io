@@ -33,6 +33,15 @@ div {
   }
 }
 
+@media only screen and (max-width: 300px) {
+  div {
+    left: 20%;
+    right: 20%;
+    min-width: 60%;
+    min-height: 30%;
+  }
+}
+
 h1, p {
     color: whitesmoke;
     font-size: 90%;
