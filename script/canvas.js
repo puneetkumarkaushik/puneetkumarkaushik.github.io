@@ -10,6 +10,8 @@ let colors = [
     "#F2884B"
 ];
 
+window.addEventListener('resize', refresh);
+
 function color() {
     return colors[Math.floor(Math.random() * colors.length)];
 }
@@ -58,6 +60,10 @@ function getBalls(num){
 }
 
 let balls = getBalls(50);
+
+function refresh(){
+    balls = getBalls(50);
+}
 
 function render(){
     for(let i=0; i<balls.length; i++){
