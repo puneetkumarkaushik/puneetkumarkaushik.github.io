@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    background-color: #145873;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+canvas {
+    width: 90%;
+    height: 50em;
+    background-color: azure;
+    position: relative;
+}
+
+div {
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    top: 20%;
+    min-width: 20%;
+    min-height: 20%;
+    /* background-color: rgba(3,140,115, 0.8); */
+    background-color: rgba(20,88,115, 0.8);
+    border-radius: 5px;
+}
+
+h1, p {
+    color: whitesmoke;
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
