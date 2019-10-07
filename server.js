@@ -10,29 +10,9 @@ http.createServer(function (req, res) {
 		    res.end();
   		});
 	}
-	else if(req.url === '/contact.html'){
-		fs.readFile('contact.html', function(err, data) {
-		    res.writeHead(200, {'Content-Type': 'text/html'});
-		    res.write(data);
-		    res.end();
-  		});
-	}
-	else if(req.url === '/about.html'){
-		fs.readFile('about.html', function(err, data) {
-		    res.writeHead(200, {'Content-Type': 'text/html'});
-		    res.write(data);
-		    res.end();
-  		});
-	}
-	else if(req.url === '/services.html'){
-		fs.readFile('services.html', function(err, data) {
-		    res.writeHead(200, {'Content-Type': 'text/html'});
-		    res.write(data);
-		    res.end();
-  		});
-	}
-	else if(req.url === '/samples.html'){
-		fs.readFile('samples.html', function(err, data) {
+	else if(req.url.match('\.html$')){
+		filePath = path.join(__dirname, req.url);
+		fs.readFile(filePath, function(err, data) {
 		    res.writeHead(200, {'Content-Type': 'text/html'});
 		    res.write(data);
 		    res.end();
@@ -64,6 +44,15 @@ http.createServer(function (req, res) {
 		res.writeHead(200, {'Content-Type': 'text/css'});
 		imgFile.pipe(res);
 	}
+	else if(req.url.match("\.jpeg$")){
+		var imgPath = path.join(__dirname, req.url);
+		var imgFile = fs.createReadStream(imgPath);
+		
+		res.writeHead(200, {'Content-Type': 'text/css'});
+		imgFile.pipe(res);
+
+		console.log(imgPath);
+	}
 	else if(req.url.match("^/contact.html?")){
 		fs.readFile('contact.html', function(err, data) {
 		    res.writeHead(200, {'Content-Type': 'text/html'});
@@ -79,5 +68,6 @@ http.createServer(function (req, res) {
 		    res.end();
   		});
 	}
+	console.log(req.url);
 }).listen(8080);
 console.log('nodejs is running on 8080');
