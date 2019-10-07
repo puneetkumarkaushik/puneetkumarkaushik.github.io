@@ -24,6 +24,15 @@ div {
     border-radius: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  div {
+    left: 30%;
+    right: 30%;
+    min-width: 40%;
+    min-height: 20%;
+  }
+}
+
 h1, p {
     color: whitesmoke;
     font-size: 90%;
