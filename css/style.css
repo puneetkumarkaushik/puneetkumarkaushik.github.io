@@ -12,6 +12,18 @@ body {
 	border-radius: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    .zone {
+    	margin: 0.5em 3em;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .zone {
+    	margin: 0.5em 1em;
+    }
+}
+
 .header {
 
 }
@@ -32,7 +44,6 @@ body {
 }
 
 .profile div {
-	/*border: 1px solid black;*/
 	margin: 1em 3em;
 	width: 70%;
 	text-align: left;
@@ -50,16 +61,20 @@ body {
 	grid-gap: 20px;
 	grid-template-columns: 1fr 3fr;
 	padding: 30px;
+	font-family: 1rem;
 }
 
 .employment .timeline {
 	margin: 0 10px;
 	padding: 10px;
+	text-align: center;
 }
 
 .employment .details {
 	margin: 0 10px;
 	padding: 10px;
+	display: flex;
+	flex-direction: column;
 	text-align: left;
 }
 
