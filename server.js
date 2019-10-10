@@ -13,9 +13,17 @@ http.createServer(function (req, res) {
 	else if(req.url.match('\.html$')){
 		filePath = path.join(__dirname, req.url);
 		fs.readFile(filePath, function(err, data) {
-		    res.writeHead(200, {'Content-Type': 'text/html'});
-		    res.write(data);
-		    res.end();
+			if(err){
+				fs.readFile('pages/notFound.html', function(err, data) {
+			    res.writeHead(200, {'Content-Type': 'text/html'});
+			    res.write(data);
+			    res.end();
+				});
+			}else {
+				res.writeHead(200, {'Content-Type': 'text/html'});
+			    res.write(data);
+			    res.end();
+			}
   		});
 	}
 	else if(req.url.match("\.css$")){
@@ -50,8 +58,6 @@ http.createServer(function (req, res) {
 		
 		res.writeHead(200, {'Content-Type': 'text/css'});
 		imgFile.pipe(res);
-
-		console.log(imgPath);
 	}
 	else if(req.url.match("^/contact.html?")){
 		fs.readFile('contact.html', function(err, data) {
@@ -68,6 +74,6 @@ http.createServer(function (req, res) {
 		    res.end();
   		});
 	}
-	console.log(req.url);
+	// console.log(req.url);
 }).listen(8080);
 console.log('nodejs is running on 8080');

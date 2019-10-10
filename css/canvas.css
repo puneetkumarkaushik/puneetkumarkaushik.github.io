@@ -20,7 +20,8 @@ div {
     min-width: 20%;
     min-height: 20%;
     /* background-color: rgba(3,140,115, 0.8); */
-    background-color: rgba(20,88,115, 0.8);
+    /*background-color: rgba(20,88,115, 0.8);*/
+    background-color: rgba(74, 83, 220, 0.8);
     border-radius: 5px;
 }
 

@@ -1,14 +1,18 @@
 body {
-	background-color: #145873;
+	/*background: linear-gradient(to bottom, red, yellow);*/
+	background: linear-gradient(to bottom, rgb(74, 83, 220), rgb(37, 120, 58));
+	/*background-color: rgba(255, 121, 0, 0.3);*/
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	font-family:Lucida Sans Unicode;
+	font-size: 12px;
 }
 
 .zone {
-	margin: 0.5em 5em;
+	margin: 0.5em 10em;
 	background-color: whitesmoke;
+	/*background: linear-gradient(to bottom, whitesmoke, #145873);*/
 	border-radius: 10px;
 }
 
@@ -51,9 +55,90 @@ body {
 
 .profile img {
 	padding: 5px;
-	width: 200px;
-	height: 230px;
+	width: 15%;
+	height: 200px;
 	border-radius: 10px;
+}
+
+div.handles {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+div.handles ul {
+	list-style-type: none;
+	padding: 0px 0px 0px 20px;
+	margin: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+div.handles ul li {
+	padding: 0px 5px;
+}
+
+div.handles ul li img{
+	width: 50px;
+	height: 50px;
+}
+
+div.skills {
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+}
+
+div.skillList {
+	width: 80%;
+	height: 100%;
+	overflow: scroll;
+}
+
+div.skillList ul {
+	list-style-type: none;
+	padding: 0px 40px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+div.skillList ul li{
+	justify-content: center;
+	align-content: center;
+	border-radius: 10px;
+	border: 1px solid grey;
+}
+
+div.skillList ul li img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+div.skillShow {
+	padding: 2%;
+	/*width: 26%;*/
+	width: 300px;
+}
+
+li.highlight {
+	background-color: #145873;
+	background-color: rgba(74, 83, 220, 0.5);
+}
+
+div.skillShow canvas{
+	border: 1px solid grey;
+	border-radius: 20px;
+	width: 100%;
+	height: 90%;
+}
+
+#subject {
+	width: 100%;
+	height: 10%;
+	margin: 2px;
+	padding: 5px;
 }
 
 .employment {
@@ -61,16 +146,14 @@ body {
 	grid-gap: 20px;
 	grid-template-columns: 1fr 3fr;
 	padding: 30px;
-	font-family: 1rem;
 }
 
-.employment .timeline {
+.timeline {
 	margin: 0 10px;
 	padding: 10px;
-	text-align: center;
-}
+}	
 
-.employment .details {
+.details {
 	margin: 0 10px;
 	padding: 10px;
 	display: flex;
@@ -101,10 +184,10 @@ body {
 }
 
 .footer ul li img{
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 }
 
 .footer p{
-	font-size: .6em;
+	font-size: .8em;
 }
