@@ -7,6 +7,8 @@ body {
 	text-align: center;
 	font-family:Lucida Sans Unicode;
 	font-size: 12px;
+	margin: 0;
+	padding: 0;
 }
 
 .zone {
@@ -16,17 +18,20 @@ body {
 	border-radius: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-device-width: 800px) {
+	body {
+		font-size: 14px;
+	}
     .zone {
     	margin: 0.5em 0 0 0;
     }
 }
 
-@media only screen and (max-width: 300px) {
+/*@media only screen and (max-width: 300px) {
     .zone {
     	margin: 0.5em 0 0 0;
     }
-}
+}*/
 
 .header {
 
